@@ -2,13 +2,18 @@
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FServerCentral%2Faz-lighthouse%2Fmain%2Fdeploy.json)
 
 ## Description
+Azure Lighthouse provides Deft with delegated access to support and manage your Azure environment, while leaving you in control. Lighthouse removes the need to create administrator accounts for Deft teams in your company’s tenant and establishes a secure partner relationship, providing greater visibility into Deft access and actions.
+
+Deft strives to reduce risk through the principles of "just enough" and "just in time" access. Deft leverages Azure AD Privileged Identity Management to provide our teams with the minimum level of permissions required to support your environment along with a secure method of temporarily elevating access when necessary.
+
+Below you will find instructions for deploying Azure Lighthouse (it's simple!) as well as a list of authorizations, or role-based access control assignments that will be provided to Deft. As always, please reach out to us if you have any questions!
 
 ## Deployment Instructions
 1. Click the _**Deploy to Azure**_ button above
 
 2. Be sure to be signed in with an Azure AD account that has _Microsoft.Authorization/roleAssignments/write_ permissions (typically a user assigned to Owner role for the Azure subscription)
 
-3. On the "Custom Deployment" page, select the appropriate subscription from the dropdown and then verify that the correct Region is populated
+3. On the _Custom Deployment_ page, select the appropriate **Subscription** from the dropdown and then verify that the correct **Region** is populated
 
 ![Azure Lighthouse "Custom Deployment" screenshot](media/azure-lighthouse-custom-deployment-screenshot.png)
 
