@@ -1,8 +1,7 @@
 # Click this button to deploy Lighthouse template
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fahughes-org%2Faz-lighthouse%2Fmain%2Fdeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FServerCentral%2Faz-lighthouse%2Fmain%2Fdeploy.json)
 
 ## Description
-Lorem ipsum filler text here. Customer first mover advantage gen-z release direct mailing lean startup handshake assets. Sales stealth market freemium supply chain funding. Buzz MVP first mover advantage beta. Seed round handshake strategy hackathon non-disclosure agreement return on investment equity facebook backing user experience. End of lorem ipsum filler text.
 
 ## Deployment Instructions
 1. Click the _**Deploy to Azure**_ button above
