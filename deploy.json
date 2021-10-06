@@ -1,0 +1,139 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "mspOfferName": {
+        "type": "string",
+        "defaultValue": "Deft Azure Support"
+    },
+    "mspOfferDescription": {
+      "type": "string",
+      "defaultValue": "Deft is your trusted Azure advisor, deftly delivering on the promise of technology."
+    },
+    "managedByTenantId": {
+      "type": "string",
+      "defaultValue": "b8483a09-f3e5-4681-8a64-16000e26ed41"
+    },
+    "authorizations": {
+      "type": "array",
+      "defaultValue": [
+        {
+          "principalId": "7edef441-c704-469a-91e1-8782ecbcddc9",
+          "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+          "principalIdDisplayName": "Deft Read-Only Support"
+        },
+        {
+          "principalId": "7edef441-c704-469a-91e1-8782ecbcddc9",
+          "roleDefinitionId": "00c29273-979b-4161-815c-10b084fb9324",
+          "principalIdDisplayName": "Deft Backup Support"
+        },
+        {
+          "principalId": "917ae3fb-30f2-4380-8d97-63f80b67039c",
+          "roleDefinitionId": "73c42c96-874c-492b-b04d-ab87d138a893",
+          "principalIdDisplayName": "Deft Operations Readers"
+        },
+        {
+          "principalId": "917ae3fb-30f2-4380-8d97-63f80b67039c",
+          "roleDefinitionId": "8d289c81-5878-46d4-8554-54e1e3d8b5cb",
+          "principalIdDisplayName": "Deft Operations Readers"
+        },
+        {
+          "principalId": "917ae3fb-30f2-4380-8d97-63f80b67039c",
+          "roleDefinitionId": "00c29273-979b-4161-815c-10b084fb9324",
+          "principalIdDisplayName": "Deft Backup Operations"
+        },
+        {
+          "principalId": "917ae3fb-30f2-4380-8d97-63f80b67039c",
+          "roleDefinitionId": "d3881f73-407a-4167-8283-e981cbba0404",
+          "principalIdDisplayName": "Deft Automation Operations"
+        },
+        {
+          "principalId": "917ae3fb-30f2-4380-8d97-63f80b67039c",
+          "roleDefinitionId": "434105ed-43f6-45c7-a02f-909b2ba83430",
+          "principalIdDisplayName": "Deft Cost Management"
+        },
+        {
+          "principalId": "917ae3fb-30f2-4380-8d97-63f80b67039c",
+          "roleDefinitionId": "4a9ae827-6dc8-4573-8ac7-8239d42aa03f",
+          "principalIdDisplayName": "Deft Tag Operations"
+        },
+        {
+          "principalId": "5f209e3a-05e2-45cc-bbac-c45fa45db0de",
+          "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+          "principalIdDisplayName": "Deft Elevated Operations"
+        },
+        {
+          "principalId": "96f5cb7c-8a46-4db9-bd75-a2413c127d98",
+          "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+          "principalIdDisplayName": "Deft Elevated Management"
+        },
+        {
+          "principalId": "96f5cb7c-8a46-4db9-bd75-a2413c127d98",
+          "roleDefinitionId": "36243c78-bf99-498c-9df9-86d9f8d28608",
+          "principalIdDisplayName": "Deft Policy Management"
+        },
+        {
+          "principalId": "96f5cb7c-8a46-4db9-bd75-a2413c127d98",
+          "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+          "principalIdDisplayName": "Deft Policy Remediation Management",
+          "delegatedRoleDefinitionIds": [
+            "92aaf0da-9dab-42b6-94a3-d43ce8d16293",
+            "9980e02c-c2be-4d73-94e8-173b1dc7cf3c",
+            "5e467623-bb1f-42f4-a55d-6e525e11384b",
+            "749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+            "fb1c8493-542b-48eb-b624-b4c8fea62acd",
+            "b24988ac-6180-42a0-ab88-20f7382dd24c"
+          ]
+        },
+        {
+          "principalId": "96f5cb7c-8a46-4db9-bd75-a2413c127d98",
+          "roleDefinitionId": "41077137-e803-4205-871c-5a86e6a753b4",
+          "principalIdDisplayName": "Deft Blueprint Management"
+        },
+        {
+          "principalId": "96f5cb7c-8a46-4db9-bd75-a2413c127d98",
+          "roleDefinitionId": "437d2ced-4a38-4302-8479-ed2bcb43d090",
+          "principalIdDisplayName": "Deft Blueprint Assignments"
+        }
+      ]
+    }
+  },
+  "variables": {
+    "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
+    "mspAssignmentName": "[guid(parameters('mspOfferName'))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.ManagedServices/registrationDefinitions",
+      "apiVersion": "2019-09-01",
+      "name": "[variables('mspRegistrationName')]",
+      "properties": {
+        "registrationDefinitionName": "[parameters('mspOfferName')]",
+        "description": "[parameters('mspOfferDescription')]",
+        "managedByTenantId": "[parameters('managedByTenantId')]",
+        "authorizations": "[parameters('authorizations')]"
+      }
+    },
+    {
+      "type": "Microsoft.ManagedServices/registrationAssignments",
+      "apiVersion": "2019-09-01",
+      "name": "[variables('mspAssignmentName')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
+      ],
+      "properties": { 
+        "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
+      }
+    }
+  ],
+  "outputs": {
+    "mspOfferName": {
+      "type": "string",
+      "value": "parameters('mspOfferName')"
+    },
+    "authorizations": {
+      "type": "array",
+      "value": "[parameters('authorizations')]"
+    }
+  }
+}
