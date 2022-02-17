@@ -46,6 +46,7 @@ Deft Policy Management | [Resource Policy Contributor] | `36243c78-bf99-498c-9df
 Deft Policy Remediation Management | [User Access Administrator]* | `18d7d88d-d35e-4fb5-a5c3-7773c20a72d9`
 Deft Blueprint Management | [Blueprint Contributor] | `41077137-e803-4205-871c-5a86e6a753b4`
 Deft Blueprint Assignements | [Blueprint Operator] | `437d2ced-4a38-4302-8479-ed2bcb43d090`
+Deft Billing Integration | [Billing Reader] | `fa23ad8b-c56e-40d8-ac0c-ce449e1d2c64`
 
 
 *_Deft Policy Remediation Management, delegated the **User Access Administrator** role, is limited to assigning managed identities the following RBAC roles ([Learn more][1])_:
@@ -77,5 +78,6 @@ Assignable Role | RBAC Role ID
 [Backup Contributor]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#backup-contributor
 [Monitoring Contributor]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#monitoring-contributor
 [Security Admin]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#security-admin
+[Billing Reader]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#billing-reader
 
 [1]: https://docs.microsoft.com/en-us/azure/lighthouse/how-to/deploy-policy-remediation#create-a-user-who-can-assign-roles-to-a-managed-identity-in-the-customer-tenant
