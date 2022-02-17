@@ -94,6 +94,11 @@
           "principalId": "96f5cb7c-8a46-4db9-bd75-a2413c127d98",
           "roleDefinitionId": "437d2ced-4a38-4302-8479-ed2bcb43d090",
           "principalIdDisplayName": "Deft Blueprint Assignments"
+        },
+        {
+          "principalId": "64bc1cd7-802d-4f7d-88b3-f9f9a0ae6fce",
+          "roleDefinitionId": "fa23ad8b-c56e-40d8-ac0c-ce449e1d2c64",
+          "principalIdDisplayName": "Deft Billing Integration"
         }
       ]
     }
