@@ -40,7 +40,9 @@ Deft Backup Operations | [Backup Operator] | `00c29273-979b-4161-815c-10b084fb93
 Deft Automation Operations | [Automation Operator] | `d3881f73-407a-4167-8283-e981cbba0404`
 Deft Cost Management | [Cost Management Contributor] | `434105ed-43f6-45c7-a02f-909b2ba83430`
 Deft Tag Operations | [Tag Contributor] | `4a9ae827-6dc8-4573-8ac7-8239d42aa03f`
+Deft Kubernetes Operations | [Azure Kubernetes Service Cluster User Role] | `4abbcc35-e782-43d8-92c5-2d3f1bd2253f`
 Deft Elevated Operations | [Contributor] | `b24988ac-6180-42a0-ab88-20f7382dd24c`
+Deft Kubernetes Management | [Azure Kubernetes Service Cluster Admin Role] | `0ab0b1a8-8aac-4efd-b8c2-3ee1fb270be8`
 Deft Elevated Management | [Contributor] | `b24988ac-6180-42a0-ab88-20f7382dd24c`
 Deft Policy Management | [Resource Policy Contributor] | `36243c78-bf99-498c-9df9-86d9f8d28608`
 Deft Policy Remediation Management | [User Access Administrator]* | `18d7d88d-d35e-4fb5-a5c3-7773c20a72d9`
@@ -67,7 +69,9 @@ Assignable Role | RBAC Role ID
 [Automation Operator]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#automation-operator
 [Cost Management Contributor]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#cost-management-contributor
 [Tag Contributor]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#tag-contributor
+[Azure Kubernetes Service Cluster User Role]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#azure-kubernetes-service-cluster-user-role
 [Contributor]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#contributor
+[Azure Kubernetes Service Cluster Admin Role]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#azure-kubernetes-service-cluster-admin-role
 [Resource Policy Contributor]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#resource-policy-contributor
 [User Access Administrator]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#user-access-administrator
 [Blueprint Contributor]: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#blueprint-contributor
