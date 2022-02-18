@@ -59,8 +59,18 @@
         },
         {
           "principalId": "5f209e3a-05e2-45cc-bbac-c45fa45db0de",
+          "roleDefinitionId": "4abbcc35-e782-43d8-92c5-2d3f1bd2253f",
+          "principalIdDisplayName": "Deft Kubernetes Operations"
+        },
+        {
+          "principalId": "5f209e3a-05e2-45cc-bbac-c45fa45db0de",
           "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
           "principalIdDisplayName": "Deft Elevated Operations"
+        },
+        {
+          "principalId": "96f5cb7c-8a46-4db9-bd75-a2413c127d98",
+          "roleDefinitionId": "0ab0b1a8-8aac-4efd-b8c2-3ee1fb270be8",
+          "principalIdDisplayName": "Deft Kubernetes Management"
         },
         {
           "principalId": "96f5cb7c-8a46-4db9-bd75-a2413c127d98",
